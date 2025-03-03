@@ -35,6 +35,6 @@ jobs:
       run: |
         #!/usr/bin/env bash
         docker login hkccr.ccs.tencentyun.com --username=${{ secrets.TENCENT_USERNAME }} --password=${{ secrets.TENCENT_PASSWORD }}
-		skopeo login -u ${{ secrets.TENCENT_USERNAME }} -p  ${{ secrets.TENCENT_PASSWORD }} hkccr.ccs.tencentyun.com
+        skopeo login -u ${{ secrets.TENCENT_USERNAME }} -p  ${{ secrets.TENCENT_PASSWORD }} hkccr.ccs.tencentyun.com
         skopeo copy docker://${{ github.event.inputs.registry }}/${{ github.event.inputs.imagePath }} docker://hkccr.ccs.tencentyun.com/domi/${{ github.event.inputs.imageName }}
  
