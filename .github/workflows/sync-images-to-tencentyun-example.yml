@@ -33,6 +33,7 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Tencentyun Hub
       run: |
         #!/usr/bin/env bash
-        docker login ccr.ccs.tencentyun.com --username=${{ secrets.TENCENT_USERNAME }} --password=${{ secrets.TENCENT_PASSWORD }}
-        skopeo copy docker://docker.io/library/python:3.10-slim-bullseye docker://ccr.ccs.tencentyun.com/domi/python:3.10-slim-bullseye
+        docker login hkccr.ccs.tencentyun.com --username=${{ secrets.TENCENT_USERNAME }} --password=${{ secrets.TENCENT_PASSWORD }}
+        echo 'Login Succeeded'
+        skopeo copy docker://docker.io/library/python:3.10-slim-bullseye docker://hkccr.ccs.tencentyun.com/domi/python:3.10-slim-bullseye
  
