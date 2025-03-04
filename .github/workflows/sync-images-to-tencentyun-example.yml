@@ -18,11 +18,11 @@ on:
       imagePath:
         description: "镜像路径"
         required: true
-        default: "library/python:3.10-slim-bullseye"
+        default: "library/python:3.10"
       imageName:
         description: "镜像名称"
         required: true
-        default: "python:3.10-slim-bullseye"  
+        default: "python:3.10"
 
 # 工作流程任务（通常含有一个或多个步骤）
 jobs:
